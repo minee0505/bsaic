@@ -19,6 +19,13 @@ public class Member {
     private String nickname;
 
 
+    /*public Member(MemberCreateDto dto) {
+        this.uid = UUID.randomUUID().toString();
+        this.password = dto.getPw();
+        this.account = dto.getUserAcc();
+        this.nickname = dto.getNick();
+    }*/
+
 
     public Member(String password, String account, String nickname) {
         this.uid = UUID.randomUUID().toString();
