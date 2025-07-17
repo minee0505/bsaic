@@ -85,7 +85,7 @@ public class ScoreApiController {
         }
         calculateRanks(); // 현재 석차 계산
         Score score = scoreStore.get(id);
-        return ResponseEntity.ok(ScoreDetailResponse.from(score, scoreStore.size()));
+        return ResponseEntity.ok(ScoreDetailResponse.of(score, scoreStore.size()));
     }
 
     // 성적 등록

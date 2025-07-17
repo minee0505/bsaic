@@ -18,7 +18,7 @@ public class ScoreDetailResponse {
     private int rank;
     private int totalCount; // 전체 학생 수
 
-    public static ScoreDetailResponse from(Score score, int totalCount) {
+    public static ScoreDetailResponse of(Score score, int totalCount) {
         return ScoreDetailResponse.builder()
                 .fullName(score.getName())
                 .kor(score.getKor())
