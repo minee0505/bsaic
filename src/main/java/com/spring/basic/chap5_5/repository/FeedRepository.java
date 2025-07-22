@@ -50,8 +50,9 @@ public class FeedRepository {
     }
 
     // 데이터 삭제 로직
-    public void deleteById(Long id) {
-        feedStore.remove(id);
+    public boolean deleteById(Long id) {
+        Feed removed = feedStore.remove(id);
+        return removed != null;
     }
 
     // 데이터 개별 조회 로직
