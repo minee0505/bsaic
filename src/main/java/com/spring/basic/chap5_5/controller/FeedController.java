@@ -46,5 +46,18 @@ public class FeedController {
         return ResponseEntity.ok("피드 저장 성공!");
     }
 
+    // 피드 삭제 요청 /api/v5-5/feeds/{id} : DELETE
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteFeed(@PathVariable Long id) {
+        feedRepository.deleteById(id);
+        return ResponseEntity.ok("삭제 성공!!");
+    }
+
+    // 피드 개별조회 요청 /api/v5-5/feeds/{id} : GET
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findOne(@PathVariable Long id) {
+        Feed feed = feedRepository.findById(id);
+        return ResponseEntity.ok(feed);
+    }
 
 }
